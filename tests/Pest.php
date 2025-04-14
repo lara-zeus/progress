@@ -1,5 +1,5 @@
 <?php
 
-use IbrahimBougaoua\FilaProgress\Tests\TestCase;
+use LaraZeus\Progress\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

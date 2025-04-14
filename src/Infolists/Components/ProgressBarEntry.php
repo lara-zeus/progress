@@ -1,16 +1,16 @@
 <?php
 
-namespace IbrahimBougaoua\FilaProgress\Infolists\Components;
+namespace LaraZeus\Progress\Infolists\Components;
 
 use Filament\Infolists\Components\Entry;
 
 class ProgressBarEntry extends Entry
 {
-    protected $canShow = true;
+    protected bool $canShow = true;
 
-    protected string $view = 'filaprogress::infolists.components.progress-bar-entry';
+    protected string $view = 'progress::infolists.components.progress-bar-entry';
 
-    public function hideProgressValue($canShow = false)
+    public function hideProgressValue($canShow = false): static
     {
         $this->canShow = $canShow;
 

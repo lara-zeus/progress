@@ -1,17 +1,17 @@
 {
-    "name": "ibrahim-bougaoua/filaprogress",
-    "description": "This is my package filaprogress",
+    "name": "lara-zeus/progress",
+    "description": "This is my package progress",
     "keywords": [
-        "IbrahimBougaoua",
+        "LaraZeus",
         "laravel",
-        "filaprogress"
+        "progress"
     ],
-    "homepage": "https://github.com/ibrahim-bougaoua/filaprogress",
+    "homepage": "https://github.com/lara-zeus/progress",
     "license": "MIT",
     "authors": [
         {
-            "name": "Ibrahim Bougaoua",
-            "email": "41789518+ibrahimBougaoua@users.noreply.github.com",
+            "name": "lara-zeus",
+            "email": "info@larazeus.com",
             "role": "Developer"
         }
     ],
@@ -34,19 +34,19 @@
     },
     "autoload": {
         "psr-4": {
-            "IbrahimBougaoua\\FilaProgress\\": "src/",
-            "IbrahimBougaoua\\FilaProgress\\Database\\Factories\\": "database/factories/"
+            "LaraZeus\\Progress\\": "src/",
+            "LaraZeus\\Progress\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "IbrahimBougaoua\\FilaProgress\\Tests\\": "tests/",
+            "LaraZeus\\Progress\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-filaprogress --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-progress --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -72,10 +72,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "IbrahimBougaoua\\FilaProgress\\FilaProgressServiceProvider"
+                "LaraZeus\\Progress\\ProgressServiceProvider"
             ],
             "aliases": {
-                "FilaProgress": "IbrahimBougaoua\\FilaProgress\\Facades\\FilaProgress"
+                "Progress": "LaraZeus\\Progress\\Facades\\Progress"
             }
         }
     },

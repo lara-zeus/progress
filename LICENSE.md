@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) IbrahimBougaoua <41789518+ibrahimBougaoua@users.noreply.github.com>
+Copyright (c) LaraZeus <41789518+LaraZeus@users.noreply.github.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

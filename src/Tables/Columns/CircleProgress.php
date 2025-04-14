@@ -1,16 +1,16 @@
 <?php
 
-namespace IbrahimBougaoua\FilaProgress\Tables\Columns;
+namespace LaraZeus\Progress\Tables\Columns;
 
 use Filament\Tables\Columns\Column;
 
 class CircleProgress extends Column
 {
-    protected $canShow = true;
+    protected bool $canShow = true;
 
-    protected string $view = 'filaprogress::tables.columns.circle-progress';
+    protected string $view = 'progress::tables.columns.circle-progress';
 
-    public function hideProgressValue($canShow = false)
+    public function hideProgressValue($canShow = false): static
     {
         $this->canShow = $canShow;
 

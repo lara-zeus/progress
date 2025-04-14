@@ -4,7 +4,7 @@
         $progress = $getState()['progress'];
         $progress = $total > 0 ? ($progress / $total) * 100 : 0;
 
-        if($progress == 100){
+        if($progress === 100){
             $progressColor = '#2980b9';
         } else if($progress > 50){
             $progressColor = '#27ae60';
@@ -14,13 +14,13 @@
             $progressColor = '#e74c3c';
         }
 
-        $displayProgress = $progress == 100 ? number_format($progress, 0) : number_format($progress, 2);
+        $displayProgress = $progress === 100 ? number_format($progress, 0) : number_format($progress, 2);
     @endphp
 
     <div class="progress-container">
         <div class="progress-bar" style="width: {{ $displayProgress }}%; background-color: {{ $progressColor }};"></div>
         <div class="progress-text">
-            @if($entry instanceof \IbrahimBougaoua\FilaProgress\Infolists\Components\ProgressBarEntry && $entry->getCanShow())
+            @if($entry instanceof \LaraZeus\Progress\Infolists\Components\ProgressBarEntry && $entry->getCanShow())
                 <small @class([
                     'text-gray-700' => $displayProgress != 100,
                     'text-white' => $displayProgress == 100
