@@ -8,7 +8,7 @@ class CircleProgressEntry extends Entry
 {
     protected bool $canShow = true;
 
-    protected string $view = 'progress::infolists.components.circle-progress-entry';
+    protected string $view = 'lara-zeus-progress::infolists.components.circle-progress-entry';
 
     public function hideProgressValue($canShow = false): static
     {
