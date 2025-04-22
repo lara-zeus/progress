@@ -4,7 +4,7 @@
 
 ## This is a fork from [filaprogress](https://github.com/ibrahimBougaoua/filaprogress), fully maintained and up to date.
 
-<h4 align="center">The Progress Management Package for FilamentPHP provides a flexible and easy-to-use solution for tracking and visualizing progress within Filament admin panels. It includes custom Filament components for displaying linear and circular progress indicators directly in your admin interface. This package is designed to seamlessly integrate with Filament's existing tools, offering dynamic and customizable progress bars and circles to represent task completion, project milestones, or any metric that requires visual progress tracking. Perfect for enhancing the user experience in admin dashboards with intuitive, real-time progress displays.</h4>
+<h4 align="center">The Progress Management Package for FilamentPHP provides a flexible and easy-to-use solution for tracking and visualizing progress within Filament admin panels.</h4>
 
 <p align="center">
 
