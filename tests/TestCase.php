@@ -2,7 +2,6 @@
 
 namespace LaraZeus\Progress\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use LaraZeus\Progress\ProgressServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
