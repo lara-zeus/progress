@@ -8,7 +8,7 @@ class ProgressBar extends Column
 {
     protected bool $canShow = true;
 
-    protected string $view = 'progress::tables.columns.progress-bar';
+    protected string $view = 'lara-zeus-progress::tables.columns.progress-bar';
 
     public function hideProgressValue($canShow = false): static
     {

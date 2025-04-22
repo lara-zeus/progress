@@ -8,7 +8,7 @@ class ProgressBarEntry extends Entry
 {
     protected bool $canShow = true;
 
-    protected string $view = 'progress::infolists.components.progress-bar-entry';
+    protected string $view = 'lara-zeus-progress::infolists.components.progress-bar-entry';
 
     public function hideProgressValue($canShow = false): static
     {

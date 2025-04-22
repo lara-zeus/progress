@@ -8,7 +8,7 @@ class CircleProgress extends Column
 {
     protected bool $canShow = true;
 
-    protected string $view = 'progress::tables.columns.circle-progress';
+    protected string $view = 'lara-zeus-progress::tables.columns.circle-progress';
 
     public function hideProgressValue($canShow = false): static
     {
