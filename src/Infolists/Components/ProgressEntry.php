@@ -38,8 +38,7 @@ class ProgressEntry extends Entry
             $progressColor = '#e74c3c';
         }
 
-        $displayProgress = $progress === 100 ? number_format($progress, 0) : number_format($progress, 2);
-        $displayProgress = (int) round($displayProgress);
+        $displayProgress = number_format($progress);
 
         return [
             'progress' => $progress,
