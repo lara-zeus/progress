@@ -1,32 +1,18 @@
 <x-dynamic-component :component="$getEntryWrapperView()" :entry="$entry">
     @php
-        $total = $getState()['total'];
-        $progress = $getState()['progress'];
-        $progress = $total > 0 ? ($progress / $total) * 100 : 0;
-    
-        if($progress === 100){
-            $progressColor = '#2980b9';
-        } else if($progress > 50){
-            $progressColor = '#27ae60';
-        } else if($progress > 25){
-            $progressColor = '#f39c12';
-        } else {
-            $progressColor = '#e74c3c';
-        }    
-        
-        $displayProgress = $progress === 100 ? number_format($progress, 0) : number_format($progress, 2);
+        $data = $column->getProgressData($getState());
     @endphp
-    
+
     <div class="progress-circle" style="
         background: conic-gradient(
-            {{ $progressColor }} {{ $displayProgress * 3.6 }}deg,
-            #e5e7eb {{ $displayProgress * 3.6 }}deg
+            {{ $data['progressColor'] }} {{ $data['displayProgress'] * 3.6 }}deg,
+            #e5e7eb {{ $data['displayProgress'] * 3.6 }}deg
         );">
         @if($entry instanceof \LaraZeus\Progress\Infolists\Components\CircleProgressEntry && $entry->getCanShow())
-            <small>{{ $displayProgress }}%</small>
+            <small>{{ $data['displayProgress'] }}%</small>
         @endif
     </div>
-    
+
     <style>
         .progress-circle {
             position: relative;
