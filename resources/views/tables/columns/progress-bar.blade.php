@@ -1,30 +1,16 @@
 @php
-    $total = $getState()['total'];
-    $progress = $getState()['progress'];
-    $progress = $total > 0 ? ($progress / $total) * 100 : 0;
-
-    if($progress === 100){
-        $progressColor = '#2980b9';
-    } else if($progress > 50){
-        $progressColor = '#27ae60';
-    } else if($progress > 25){
-        $progressColor = '#f39c12';
-    } else {
-        $progressColor = '#e74c3c';
-    }
-
-    $displayProgress = $progress === 100 ? number_format($progress, 0) : number_format($progress, 2);
+    $data = $column->getProgressData($getState());
 @endphp
 
 <div class="progress-container">
-    <div class="progress-bar" style="width: {{ $displayProgress }}%; background-color: {{ $progressColor }};"></div>
+    <div class="progress-bar" style="width: {{ $data['displayProgress'] }}%; background-color: {{ $data['progressColor'] }};"></div>
     <div class="progress-text">
         @if($column instanceof \LaraZeus\Progress\Tables\Columns\ProgressBar && $column->getCanShow())
             <small @class([
-                'text-gray-700' => $displayProgress !== 100,
-                'text-white' => $displayProgress === 100
+                'text-gray-700' => $data['displayProgress'] !== 100,
+                'text-white' => $data['displayProgress'] === 100
                 ])>
-                {{ $displayProgress }}%
+                {{ $data['displayProgress'] }}%
             </small>
         @endif
     </div>
