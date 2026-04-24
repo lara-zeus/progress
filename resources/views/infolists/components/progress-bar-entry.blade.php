@@ -1,6 +1,6 @@
 <x-dynamic-component :component="$getEntryWrapperView()" :entry="$entry">
     @php
-        $data = $column->getProgressData($getState());
+        $data = $entry->getProgressData($getState());
     @endphp
 
     <div class="progress-container">

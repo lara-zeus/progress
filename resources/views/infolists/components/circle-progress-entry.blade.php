@@ -1,6 +1,6 @@
 <x-dynamic-component :component="$getEntryWrapperView()" :entry="$entry">
     @php
-        $data = $column->getProgressData($getState());
+        $data = $entry->getProgressData($getState());
     @endphp
 
     <div class="progress-circle" style="
@@ -18,7 +18,7 @@
             position: relative;
             width: 55px;
             height: 55px;
-            margin:10px;
+            margin: 10px;
             border-radius: 50%;
             display: flex;
             align-items: center;
